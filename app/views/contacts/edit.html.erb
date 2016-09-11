@@ -1,0 +1,23 @@
+<%= header "Editar Contato: #{@contact.contactName}" %>
+<div class="row">
+  <div class="col-md-4">
+    <%= form_for :contact, url: contact_path(@contact), method: :patch do |f| %>
+    <div class="form-group">
+      <%= f.label :contactName, class:'sr-only' %>
+      <%= f.text_field :contactName, autofocus: true, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :contactEmail, class: 'sr-only' %>
+      <%= f.email_field :contactEmail, autocomplete: "off", class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :contactPhone, class: 'sr-only' %>
+      <%= f.text_field :contactPhone, autocomplete: "off", class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.submit 'Gravar Contato', class: 'btn btn-default btn-lg' %>&nbsp;
+      <%= link_to 'Voltar', contacts_path, class: 'btn btn-default btn-lg' %>
+    </div>
+    <% end %>
+  </div>
+</div>

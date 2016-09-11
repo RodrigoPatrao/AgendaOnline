@@ -1,0 +1,25 @@
+<%= header 'Criar Novo Contato' %>
+<div class="row">
+  <div class="col-md-4">
+    <%= form_for :contact, url: contacts_path do |f| %>
+    <div class="form-group">
+      <%= f.label :contactName, class: 'sr-only' %>
+      <%= f.text_field :contactName, placeholder: 'Nome do Contato', autofocus: true,
+          class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :contactEmail, class: 'sr-only' %>
+      <%= f.email_field :contactEmail, autocomplete: "off", placeholder: 'Email:',
+          class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :contactPhone, class: 'sr-only' %>
+      <%= f.text_field :contactPhone, autocomplete: "off", placeholder: 'Telefone:',
+          class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Criar Contato", class: 'btn btn-default btn-lg' %>
+    </div>
+    <% end %>
+  </div>
+</div>

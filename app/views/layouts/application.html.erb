@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Agenda Online</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'partials/navbar' %>
+
+  <div class="container">
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %> alert-dismissible">
+      <button type="button" class="close" aria-label="Close" data-dismiss="alert">&times;</button>
+      <%= value %>
+    </div>
+    <% end %>
+  </div>
+
+  <%= yield :top_content %>
+
+  <div class="container">
+    <h1><%= yield :header %></h1>
+
+    <%= yield %>
+  </div>
+
+</body>
+</html>

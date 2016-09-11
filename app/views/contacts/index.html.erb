@@ -1,0 +1,39 @@
+<% header "Olá, #{current_user.name}." %>
+<div class="row">
+  <div class="col-md-7">
+    <div class="row">&nbsp;</div>
+    <div class="row">
+      <% if @contacts.empty? %>
+      <p>Você não possui contatos cadastrados.</p>
+      <% else %>
+      <p>Aqui estão seus contatos:</p>
+      <table class="table table-default">
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th></th>
+        </tr>
+        <% @contacts.each do |c| %>
+        <tr>
+          <td><%= c.contactName %></td>
+          <td><%= c.contactEmail %></td>
+          <td><%= c.contactPhone %></td>
+          <td>
+            <%= link_to 'Exibir', contact_path(c.id), class: 'btn btn-default btn-xs' %>&nbsp;
+            <%= link_to 'Editar', edit_contact_path(c.id), class: 'btn btn-default btn-xs' %>&nbsp;
+            <%= link_to 'Apagar', contact_path(c.id), method: :delete,
+            data: {confirm: 'Confirma a exclusão do contato?'},
+            class: 'btn btn-default btn-xs' %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+      <% end %>
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+      <%= link_to 'Criar Novo Contato', new_contact_path, class: 'btn btn-default btn-lg' %>
+    </div>
+  </div>
+</div>

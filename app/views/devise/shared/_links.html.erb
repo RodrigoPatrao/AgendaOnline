@@ -1,0 +1,31 @@
+<ul class="nav navbar-nav navbar-primary">
+  <%- if controller_name != 'sessions' %>
+    <li><%= link_to "Entrar", new_session_path(resource_name), class: 'navbar-link' %></li>
+
+  <% end -%>
+
+  <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+    <li><%= link_to "Criar Usuário", new_registration_path(resource_name), class: 'navbar-link' %></li>
+  <% end -%>
+
+  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+    <li><%= link_to "Esqueceu sua senha?", new_password_path(resource_name), class: 'navbar-link' %></li>
+  <% end -%>
+
+  <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+    <li><%= link_to "Não recebeu email de confirmação?", new_confirmation_path(resource_name),
+        class: 'navbar-link' %></li>
+  <% end -%>
+
+  <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+    <li><%= link_to "Não recebeu email para destravar conta?", new_unlock_path(resource_name),
+        class: 'navbar-link' %></li>
+  <% end -%>
+
+  <%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <li><%= link_to "Entrar com #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider),
+          class: 'navbar-link' %></li>
+    <% end -%>
+  <% end -%>
+</ul>
