@@ -11,4 +11,4 @@ Aplicativo hospedado em:
 
 https://agenda-online.herokuapp.com/
 
-para fins de estudo.
+para fins de estudo e avaliação.
