@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Agenda Online
 
-Things you may want to cover:
+Aplicativo Rails 5 usando as gems pg, Devise e Bootstrap.
+Elaborado como exercício para aprendizado da gem Devise.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Próxima gem a incorporar: Apartment, para banco de dados multitenant.
