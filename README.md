@@ -1,6 +1,4 @@
-# README
-
-Agenda Online
+#Agenda Online
 
 Aplicativo Rails 5 usando as gems pg, Devise e Bootstrap.
 Elaborado como exercício para aprendizado da gem Devise.
