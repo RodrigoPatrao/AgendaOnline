@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'pg'
+gem 'pg', '~> 1.2', '>= 1.2.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
