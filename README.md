@@ -6,7 +6,7 @@ Configuração para o WSL2 Ubuntu 20.04:
 - Rails 6.0.0;
 - PostgreSQL 12;
 
-Aplicativo Rails 5 usando as gems pg, Devise e Bootstrap.
+Aplicativo Rails 6 usando as gems pg, Devise e Bootstrap.
 Elaborado como exercício para aprendizado da gem Devise.
 
 Aplicativo hospedado em:
